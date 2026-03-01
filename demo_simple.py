@@ -9,7 +9,7 @@ from src.modules.verifier.constraints import ConstraintSet, Constraint, Constrai
 from src.modules.renderer.renderer import render_panel
 
 def run_demo():
-    print("🚀 GenUI Project - Simple Demo")
+    print("🚀 GenerativeUI Project - Simple Demo")
     print("--------------------------------")
 
     # 1. 定义安全约束 (模拟从Datasheet提取)

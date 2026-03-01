@@ -1,5 +1,5 @@
 #!/bin/bash
-# Start the GenUI Web Application
+# Start the GenerativeUI Project Web Application
 
 # Navigate to project root
 cd "$(dirname "$0")"
@@ -15,5 +15,5 @@ if [ -z "$GOOGLE_API_KEY" ]; then
     echo "You may need to enter it in the Web UI sidebar."
 fi
 
-echo "🚀 Starting GenUI Agent..."
+echo "🚀 Starting GenerativeUI Project..."
 streamlit run app.py

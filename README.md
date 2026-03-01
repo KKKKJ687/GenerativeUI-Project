@@ -1,4 +1,4 @@
-# GenUI Project
+# GenerativeUI Project
 
 随着工业 4.0 的推进，工业物联网（IIoT）设备的交互界面（HMI）需求激增。虽然大型语言模型（LLM）在通用代码生成上表现优异，但其本质是基于概率的预测模型，缺乏物理世界的常识。在工业场景下，LLM 极易产生“参数幻觉（Parameter Hallucination）”（例如：为仅支持 3.3V 的电机生成 0-100V 的调节滑块），从而导致设备损坏或严重安全事故。
 
@@ -15,7 +15,7 @@
 ## 项目结构
 
 ```text
-GenUI_Project/
+GenerativeUI_Project/
 ├── app.py                      # Streamlit 主入口
 ├── demo_simple.py              # 离线/最小演示（验证+修复+渲染）
 ├── start.sh                    # 启动脚本（macOS/Linux）

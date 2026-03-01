@@ -93,7 +93,7 @@ def _configure_genai_client(api_key: str) -> None:
 # ==========================================
 # 2. 配置与界面样式
 # ==========================================
-st.set_page_config(page_title="GenUI Agent Pro", layout="wide")
+st.set_page_config(page_title="GenerativeUI Project", layout="wide")
 
 st.markdown("""<style>
     :root {
@@ -314,8 +314,8 @@ st.markdown(
       <div class="gp-brand">
         <span class="gp-brand-mark" aria-hidden="true"></span>
         <div>
-          <p class="gp-eye">GENUI AGENT PRO</p>
-          <h1 class="gp-title">GenUI Agent Pro</h1>
+          <p class="gp-eye">GENERATIVEUI PROJECT</p>
+          <h1 class="gp-title">GenerativeUI Project</h1>
         </div>
       </div>
     </section>
