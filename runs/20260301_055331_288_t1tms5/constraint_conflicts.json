@@ -1,0 +1,27 @@
+{
+  "total_conflicts": 1,
+  "conflict_targets": 1,
+  "conflicts": [
+    {
+      "target": "*.current",
+      "conflict_type": "MAX_MISMATCH",
+      "constraint_1": {
+        "id": "IOUT_ABS_MAX",
+        "value": 3.5,
+        "source": "drv8871.pdf",
+        "section": "Structured_Table",
+        "priority": 1
+      },
+      "constraint_2": {
+        "id": "DRV8871_IOUT_PEAK_MAX",
+        "value": 3.6,
+        "source": "drv8871.pdf",
+        "section": "Features",
+        "priority": 1
+      },
+      "resolution": "priority_then_conservative"
+    }
+  ],
+  "resolution_strategy": "priority_then_conservative",
+  "source": "pipeline_sanity_pass"
+}

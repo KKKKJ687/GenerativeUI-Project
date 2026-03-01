@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "score": 100.0,
+  "violations": [],
+  "fixes": [],
+  "residual_risks": [],
+  "stats": {
+    "total_checks": 10,
+    "violations_found": 0,
+    "fixes_applied": 0,
+    "critical_errors": 0,
+    "warnings": 0
+  }
+}

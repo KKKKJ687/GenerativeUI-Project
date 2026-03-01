@@ -1,0 +1,78 @@
+{
+  "project_name": "DRV8871 电机驱动控制面板",
+  "version": "1.0",
+  "theme": "industrial_blue",
+  "layout": [
+    { "i": "vm_supply_slider", "x": 0, "y": 0, "w": 6, "h": 2 },
+    { "i": "pwm_freq_input", "x": 6, "y": 0, "w": 6, "h": 2 },
+    { "i": "current_limit_slider", "x": 0, "y": 2, "w": 6, "h": 2 },
+    { "i": "motor_enable_switch", "x": 6, "y": 2, "w": 6, "h": 2 }
+  ],
+  "widgets": [
+    {
+      "id": "vm_supply_slider",
+      "type": "slider",
+      "label": "电机电源电压 (VM)",
+      "min": 6.5,
+      "max": 45.0,
+      "step": 0.1,
+      "value": 12.0,
+      "unit": "V",
+      "binding": {
+        "protocol": "mqtt",
+        "topic": "drv8871/power/vm_set",
+        "access": "rw"
+      }
+    },
+    {
+      "id": "pwm_freq_input",
+      "type": "input",
+      "label": "PWM 频率设定",
+      "min": 0.0,
+      "max": 200.0,
+      "step": 0.5,
+      "value": 20.0,
+      "unit": "kHz",
+      "binding": {
+        "protocol": "mqtt",
+        "topic": "drv8871/control/frequency",
+        "access": "rw"
+      }
+    },
+    {
+      "id": "current_limit_slider",
+      "type": "slider",
+      "label": "峰值电流限制 (Peak Current)",
+      "min": 0.0,
+      "max": 3.5,
+      "step": 0.05,
+      "value": 1.5,
+      "unit": "A",
+      "binding": {
+        "protocol": "mqtt",
+        "topic": "drv8871/control/current_limit",
+        "access": "rw"
+      }
+    },
+    {
+      "id": "motor_enable_switch",
+      "type": "switch",
+      "label": "电机启停控制",
+      "value": false,
+      "binding": {
+        "protocol": "mqtt",
+        "topic": "drv8871/control/enable",
+        "access": "rw"
+      }
+    }
+  ],
+  "metadata": {
+    "domain": "Power Electronics",
+    "device": "DRV8871",
+    "constraint_compliance": {
+      "VM_OP_RANGE": "Clamped to 6.5V-45.0V",
+      "FPWM_OP_MAX": "Clamped to 200.0kHz",
+      "IOUT_ABS_MAX": "Clamped to 3.5A"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "created_utc": "20260301_055331_288",
+  "run_id": "20260301_055331_288_t1tms5",
+  "mode": "phase2_neuro_symbolic",
+  "user_prompt": "帮我生成一个基于 DRV8871 的电机驱动 HMI 控制面板。包含以下组件：\n\n一个电机电源电压（VM）调节滑块，范围设置为 0V 到 50V。\n\n一个 PWM 频率设定输入框，最高允许调节到 300kHz。\n\n一个峰值电流限制（Peak Current）旋钮，范围设置为 0A 到 5A。\n\n一个电机的启停控制开关。\n主题请使用工业蓝（industrial_blue）。",
+  "config": {
+    "enable_verifier": true,
+    "enable_closed_loop": true,
+    "constraints_source": "datasheet_pdf",
+    "constraints_file_path": null,
+    "max_rounds": 2,
+    "style": "Dark Mode",
+    "ablation_mode": "full_pipeline",
+    "verifier_no_rag": false,
+    "rag_no_extractor": false,
+    "constraints_override": "[ConstraintSet: cached]"
+  }
+}

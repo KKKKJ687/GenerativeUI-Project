@@ -1,0 +1,18 @@
+[
+  {
+    "kind": "range_max",
+    "category": "voltage",
+    "requested": "max=50.0",
+    "allowed": "max<=5.5",
+    "source_rule_id": "VIN_OP_RANGE",
+    "message": "Prompt requests voltage max 50.0, exceeding datasheet limit 5.5."
+  },
+  {
+    "kind": "range_max",
+    "category": "current",
+    "requested": "max=5.0",
+    "allowed": "max<=3.5",
+    "source_rule_id": "IOUT_ABS_MAX",
+    "message": "Prompt requests current max 5.0, exceeding datasheet limit 3.5."
+  }
+]

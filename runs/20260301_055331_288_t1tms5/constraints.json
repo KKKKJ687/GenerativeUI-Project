@@ -1,0 +1,186 @@
+{
+  "device_name": "drv8871.pdf",
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "VM_OP_RANGE",
+      "name": "Power Supply Voltage (VM) Operating Range",
+      "description": null,
+      "kind": "range",
+      "applies_to": "*.supply_voltage",
+      "min_val": 6.5,
+      "max_val": 45.0,
+      "allowed_values": null,
+      "pattern": null,
+      "unit": "V",
+      "severity": "SOFT",
+      "source": {
+        "datasheet_name": "drv8871.pdf",
+        "page": 4,
+        "section": "Recommended Operating Conditions",
+        "snippet": "VM Powersupplyvoltage 6.5 45 V",
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "VIN_OP_RANGE",
+      "name": "Logic Input Voltage (IN1, IN2) Operating Range",
+      "description": null,
+      "kind": "range",
+      "applies_to": "*.logic_voltage",
+      "min_val": 0.0,
+      "max_val": 5.5,
+      "allowed_values": null,
+      "pattern": null,
+      "unit": "V",
+      "severity": "SOFT",
+      "source": {
+        "datasheet_name": "drv8871.pdf",
+        "page": 4,
+        "section": "Recommended Operating Conditions",
+        "snippet": "V Logicinputvoltage(IN1,IN2) 0 5.5 V",
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "IOUT_ABS_MAX",
+      "name": "Continuous Output Current Absolute Maximum",
+      "description": null,
+      "kind": "max",
+      "applies_to": "*.current",
+      "min_val": 0.0,
+      "max_val": 3.5,
+      "allowed_values": null,
+      "pattern": null,
+      "unit": "A",
+      "severity": "HARD",
+      "source": {
+        "datasheet_name": "drv8871.pdf",
+        "page": 3,
+        "section": "Structured_Table",
+        "snippet": "Outputcurrent(100%dutycycle) 0 3.5 A",
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "FPWM_OP_MAX",
+      "name": "Logic Input PWM Frequency",
+      "description": null,
+      "kind": "range",
+      "applies_to": "*.frequency",
+      "min_val": 0.0,
+      "max_val": 200.0,
+      "allowed_values": null,
+      "pattern": null,
+      "unit": "kHz",
+      "severity": "HARD",
+      "source": {
+        "datasheet_name": "drv8871.pdf",
+        "page": 1,
+        "section": null,
+        "snippet": "f PWM LogicinputPWMfrequency(IN1,IN2) 0 200(1) kHz",
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "TJ_ABS_MAX",
+      "name": "Operating Junction Temperature Absolute Maximum",
+      "description": null,
+      "kind": "range",
+      "applies_to": "*.temperature",
+      "min_val": -40.0,
+      "max_val": 125.0,
+      "allowed_values": null,
+      "pattern": null,
+      "unit": "C",
+      "severity": "HARD",
+      "source": {
+        "datasheet_name": "drv8871.pdf",
+        "page": 3,
+        "section": "Structured_Table",
+        "snippet": "Operatingjunctiontemperature,T J –40 150 °C",
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "TPULSE_MIN",
+      "name": "Minimum Input Pulse Width",
+      "description": null,
+      "kind": "min",
+      "applies_to": "*.timing",
+      "min_val": 800.0,
+      "max_val": null,
+      "allowed_values": null,
+      "pattern": null,
+      "unit": "us",
+      "severity": "SOFT",
+      "source": {
+        "datasheet_name": "drv8871.pdf",
+        "page": 4,
+        "section": "Recommended Operating Conditions",
+        "snippet": "Thevoltagesappliedtotheinputsshouldhaveatleast800nsofpulsewidthtoensuredetection.",
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "DRV8871_VM_RECOMMENDED_RANGE",
+      "name": "DRV8871 Motor Supply Voltage Range",
+      "description": "Recommended operating VM range.",
+      "kind": "range",
+      "applies_to": "*.supply_voltage",
+      "min_val": 6.5,
+      "max_val": 45.0,
+      "allowed_values": null,
+      "pattern": null,
+      "unit": "V",
+      "severity": "HARD",
+      "source": {
+        "datasheet_name": "drv8871.pdf",
+        "page": 4,
+        "section": "Recommended Operating Conditions",
+        "snippet": "VM operating range: 6.5 V to 45 V",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "DRV8871_PWM_FREQ_MAX",
+      "name": "DRV8871 PWM Frequency Limit",
+      "description": "Practical PWM frequency ceiling for stable operation.",
+      "kind": "max",
+      "applies_to": "*.frequency",
+      "min_val": null,
+      "max_val": 200000.0,
+      "allowed_values": null,
+      "pattern": null,
+      "unit": "Hz",
+      "severity": "HARD",
+      "source": {
+        "datasheet_name": "drv8871.pdf",
+        "page": 8,
+        "section": "PWM Control",
+        "snippet": "PWM operating frequency guidance up to 200 kHz",
+        "confidence": 0.7
+      }
+    }
+  ],
+  "metadata": {
+    "source": "RAG Extraction",
+    "chunks_processed": 10,
+    "raw_response_preview": "{\n  \"constraints\": [\n    {\n      \"id\": \"VM_ABS_MAX\",\n      \"name\": \"Power Supply Voltage (VM) Absolute Maximum\",\n      \"kind\": \"range\",\n      \"applies_to\": \"widgets[type='slider'].max\",\n      \"max_val",
+    "conflicts_resolved": 1,
+    "conflict_targets": 1,
+    "llm_constraints_count": 12,
+    "heuristic_constraints_count": 0,
+    "enum_fallback_constraints_count": 0,
+    "raw_constraints_count": 12,
+    "deduped_constraints_count": 12,
+    "final_constraints_count": 6,
+    "extract_mode": "llm_rag",
+    "profile_augmented_rules": [
+      "DRV8871_VM_RECOMMENDED_RANGE",
+      "DRV8871_PWM_FREQ_MAX",
+      "DRV8871_IOUT_PEAK_MAX"
+    ],
+    "profile_augmented_count": 3
+  }
+}

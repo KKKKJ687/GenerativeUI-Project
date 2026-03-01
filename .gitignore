@@ -40,7 +40,6 @@ reports/
 
 # Project Specific
 temp/
-runs/
 test_runs/
 out_figures/
 out_tables/

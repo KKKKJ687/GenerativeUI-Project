@@ -1,0 +1,162 @@
+{
+  "version": "1.0",
+  "title": "DRV8871 电机驱动控制面板",
+  "description": null,
+  "theme": "industrial_blue",
+  "widgets": [
+    {
+      "id": "vm_supply_slider",
+      "label": "电机电源电压 (VM)",
+      "description": null,
+      "unit": "V",
+      "disabled": false,
+      "binding": {
+        "protocol": "mqtt",
+        "address": "drv8871/power/vm_set",
+        "access_mode": "rw",
+        "host": "localhost",
+        "port": 1883,
+        "topic": "drv8871/power/vm_set",
+        "modbus_register": null,
+        "qos": 0,
+        "client_id": null,
+        "username": null,
+        "password": null,
+        "tls": false,
+        "update_interval_ms": 1000
+      },
+      "safety": null,
+      "type": "slider",
+      "min": 6.5,
+      "max": 45.0,
+      "step": 0.1,
+      "value": 12.0,
+      "vertical": false
+    },
+    {
+      "id": "pwm_freq_input",
+      "label": "PWM 频率设定",
+      "description": null,
+      "unit": "kHz",
+      "disabled": false,
+      "binding": {
+        "protocol": "mqtt",
+        "address": "drv8871/control/frequency",
+        "access_mode": "rw",
+        "host": "localhost",
+        "port": 1883,
+        "topic": "drv8871/control/frequency",
+        "modbus_register": null,
+        "qos": 0,
+        "client_id": null,
+        "username": null,
+        "password": null,
+        "tls": false,
+        "update_interval_ms": 1000
+      },
+      "safety": null,
+      "type": "input",
+      "value": 20.0,
+      "input_type": "number",
+      "min": 0.0,
+      "max": 200.0,
+      "step": 0.5
+    },
+    {
+      "id": "current_limit_slider",
+      "label": "峰值电流限制 (Peak Current)",
+      "description": null,
+      "unit": "A",
+      "disabled": false,
+      "binding": {
+        "protocol": "mqtt",
+        "address": "drv8871/control/current_limit",
+        "access_mode": "rw",
+        "host": "localhost",
+        "port": 1883,
+        "topic": "drv8871/control/current_limit",
+        "modbus_register": null,
+        "qos": 0,
+        "client_id": null,
+        "username": null,
+        "password": null,
+        "tls": false,
+        "update_interval_ms": 1000
+      },
+      "safety": null,
+      "type": "slider",
+      "min": 0.0,
+      "max": 3.5,
+      "step": 0.05,
+      "value": 1.5,
+      "vertical": false
+    },
+    {
+      "id": "motor_enable_switch",
+      "label": "电机启停控制",
+      "description": null,
+      "unit": null,
+      "disabled": false,
+      "binding": {
+        "protocol": "mqtt",
+        "address": "drv8871/control/enable",
+        "access_mode": "rw",
+        "host": "localhost",
+        "port": 1883,
+        "topic": "drv8871/control/enable",
+        "modbus_register": null,
+        "qos": 0,
+        "client_id": null,
+        "username": null,
+        "password": null,
+        "tls": false,
+        "update_interval_ms": 1000
+      },
+      "safety": null,
+      "type": "switch",
+      "on_label": "ON",
+      "off_label": "OFF",
+      "value": false,
+      "color_on": "green"
+    }
+  ],
+  "layout": [
+    {
+      "i": "vm_supply_slider",
+      "x": 0,
+      "y": 0,
+      "w": 6,
+      "h": 2
+    },
+    {
+      "i": "pwm_freq_input",
+      "x": 6,
+      "y": 0,
+      "w": 6,
+      "h": 2
+    },
+    {
+      "i": "current_limit_slider",
+      "x": 0,
+      "y": 2,
+      "w": 6,
+      "h": 2
+    },
+    {
+      "i": "motor_enable_switch",
+      "x": 6,
+      "y": 2,
+      "w": 6,
+      "h": 2
+    }
+  ],
+  "metadata": {
+    "domain": "Power Electronics",
+    "device": "DRV8871",
+    "constraint_compliance": {
+      "VM_OP_RANGE": "Clamped to 6.5V-45.0V",
+      "FPWM_OP_MAX": "Clamped to 200.0kHz",
+      "IOUT_ABS_MAX": "Clamped to 3.5A"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "generated_utc": "2026-03-01T05:53:46.652567+00:00",
+  "events": [
+    {
+      "ts_utc": "2026-03-01T05:53:31.289186+00:00",
+      "event_type": "ui_run_start",
+      "payload": {
+        "model": "models/gemini-3-flash-preview",
+        "mode": "Phase 2 (Neuro-Symbolic)",
+        "ablation_mode": "full_pipeline"
+      }
+    },
+    {
+      "ts_utc": "2026-03-01T05:53:31.300418+00:00",
+      "event_type": "phase2_architect_start",
+      "payload": {
+        "style": "Dark Mode",
+        "constraints_count": 8
+      }
+    },
+    {
+      "ts_utc": "2026-03-01T05:53:46.633343+00:00",
+      "event_type": "phase2_architect_done",
+      "payload": {
+        "dsl_chars": 1846
+      }
+    },
+    {
+      "ts_utc": "2026-03-01T05:53:46.646635+00:00",
+      "event_type": "phase2_render_start",
+      "payload": {}
+    },
+    {
+      "ts_utc": "2026-03-01T05:53:46.649292+00:00",
+      "event_type": "phase2_render_done",
+      "payload": {
+        "output_chars": 34262
+      }
+    },
+    {
+      "ts_utc": "2026-03-01T05:53:46.651951+00:00",
+      "event_type": "telemetry",
+      "payload": {
+        "success": true,
+        "mode": "phase2_neuro_symbolic",
+        "violations_count": 0,
+        "fixes_count": 0,
+        "closed_loop_rounds": 0,
+        "total_ms": 15360
+      }
+    }
+  ],
+  "replay_state": {
+    "values": {},
+    "acks": [],
+    "errors": [],
+    "telemetry": [
+      {
+        "success": true,
+        "mode": "phase2_neuro_symbolic",
+        "violations_count": 0,
+        "fixes_count": 0,
+        "closed_loop_rounds": 0,
+        "total_ms": 15360
+      }
+    ],
+    "commands_total": 0,
+    "commands_denied": 0
+  }
+}
