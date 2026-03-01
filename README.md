@@ -114,3 +114,7 @@ chmod +x start.sh
 3. 依赖安装慢或失败
 - 先升级 pip：`python -m pip install -U pip`
 - 然后重新安装：`pip install -r requirements.txt`
+
+## demo
+
+在run文件夹中，有演示用的datasheet、prompt和产出
